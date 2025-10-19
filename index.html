@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SENTRY — Research Project</title>
+  <meta name="description" content="SENTRY: model project page"/>
+  <style>
+    :root{--accent:#0f62fe;--muted:#6b7280;--card:#f8fafc;--maxw:980px;--pad:20px;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{background:#fff;color:#0b1220;margin:0;padding:40px;display:flex;justify-content:center}
+    .wrap{max-width:var(--maxw);width:100%}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,#0f62fe22,#7f5af022);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:1.5rem}
+    .meta{color:var(--muted);margin-top:6px}
+    .links{margin-top:12px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;margin-right:8px;border:1px solid #e6eefc}
+    .btn-primary{background:var(--accent);color:#fff}
+    main{margin-top:20px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    img.res{max-width:100%;height:auto;border-radius:8px}
+    footer{margin-top:26px;color:var(--muted);font-size:0.9rem}
+    @media (max-width:900px){header{flex-direction:column;align-items:flex-start}.logo{width:64px;height:64px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">S</div>
+      <div>
+        <h1>SENTRY</h1>
+        <div class="meta">Official project page — short subtitle or one-line description</div>
+        <div class="links">
+          <a class="btn btn-primary" href="#" target="_blank">Paper (link)</a>
+          <a class="btn" href="#" target="_blank">Code</a>
+        </div>
+      </div>
+    </header>
+
+    <main style="margin-top:18px">
+      <div class="card">
+        <h3>Abstract</h3>
+        <p class="small">A short abstract or summary of the SENTRY model goes here. Replace this text with your abstract or a brief description of the method, contributions, and main results.</p>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="card">
+        <h3>Example</h3>
+        <p class="small">Add qualitative examples, figure placeholders, or short demo instructions here.</p>
+        <div style="height:10px"></div>
+        <img class="res" src="assets/sentry-example.jpg" alt="Example frame (replace with your image)" />
+      </div>
+    </main>
+
+    <footer>
+      <div class="small">Created by Your Name — last updated: <!-- insert date --> </div>
+    </footer>
+  </div>
+</body>
+</html>
