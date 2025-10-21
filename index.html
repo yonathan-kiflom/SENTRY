@@ -2,59 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SENTRY</title>
-  <meta name="description" content="SENTRY: model project page"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentry — Neighbor-Aware Self-Verified Visual Object Tracking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{--accent:#0f62fe;--muted:#6b7280;--card:#f8fafc;--maxw:980px;--pad:20px;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-    body{background:#fff;color:#0b1220;margin:0;padding:40px;display:flex;justify-content:center}
-    .wrap{max-width:var(--maxw);width:100%}
-    header{display:flex;align-items:center;gap:18px}
-    .logo{width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,#0f62fe22,#7f5af022);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
-    h1{margin:0;font-size:1.5rem}
-    .meta{color:var(--muted);margin-top:6px}
-    .links{margin-top:12px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;margin-right:8px;border:1px solid #e6eefc}
-    .btn-primary{background:var(--accent);color:#fff}
-    main{margin-top:20px}
-    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
-    img.res{max-width:100%;height:auto;border-radius:8px}
-    footer{margin-top:26px;color:var(--muted);font-size:0.9rem}
-    @media (max-width:900px){header{flex-direction:column;align-items:flex-start}.logo{width:64px;height:64px}}
+    :root{--accent:#1f476f;--muted:#6b7280;--bg:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;font-weight:300;color:#111;margin:0;background:var(--bg)}
+    .container{max-width:980px;margin:48px auto;padding:0 24px}
+    header{text-align:center;margin-bottom:30px}
+    h1{font-size:44px;margin:6px 0 10px;line-height:1.05;font-weight:800;color:#222}
+    .subtitle{color:var(--muted);margin-bottom:8px}
+    .authors{color:var(--accent);font-weight:600;margin-bottom:6px}
+    .affil{color:var(--muted);margin-bottom:18px}
+    .cta{display:inline-flex;gap:12px;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:#111;color:#fff;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(16,24,40,0.08)}
+    .btn.ghost{background:#f3f4f6;color:#111;border:1px solid #e6e9ef}
+    .hero{margin-top:36px;background:#fafafa;padding:18px;border-radius:12px}
+    .compare{display:flex;gap:12px;align-items:stretch}
+    .panel{flex:1;overflow:hidden;border-radius:8px;background:#000;color:#fff;position:relative}
+    .panel img{width:100%;height:auto;display:block}
+    .panel .label{position:absolute;left:12px;top:8px;background:rgba(0,0,0,0.6);padding:6px 10px;border-radius:6px;font-weight:700}
+    footer{text-align:center;color:var(--muted);font-size:14px;margin:40px 0}
+    @media (max-width:760px){h1{font-size:28px}.compare{flex-direction:column}.cta{flex-direction:column}}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
-      <div class="logo">S</div>
-      <div>
-        <h1>SENTRY-SAM2: Neighbor-Aware Self-Verified Visual Object Tracking with Cycle-Consistent Masks</h1>
-        <div class="meta">Official project page — short subtitle or one-line description</div>
-        <div class="links">
-          <a class="btn btn-primary" href="#" target="_blank">Paper (link)</a>
-          <a class="btn" href="#" target="_blank">Code</a>
-        </div>
+      <h1>Sentry:<br>Neighbor-Aware Self‑Verified Visual Object Tracking with Cycle‑Consistent Masks</h1>
+      <div class="subtitle">CVPR 2025</div>
+      <div class="authors">Your Name<sup>*</sup>, Coauthor Name, Another Coauthor</div>
+      <div class="affil">Faculty / Lab / University or Company</div>
+      <div class="cta">
+        <a class="btn" href="#" target="_blank" rel="noopener">📄 Preprint</a>
+        <a class="btn ghost" href="#" target="_blank" rel="noopener">💻 Code</a>
       </div>
     </header>
 
-    <main style="margin-top:18px">
-      <div class="card">
-        <h3>Abstract</h3>
-        <p class="small">A short abstract or summary of the SENTRY model goes here. Replace this text with your abstract or a brief description of the method, contributions, and main results.</p>
-      </div>
+    <main>
+      <section class="hero">
+        <div class="compare">
+          <div class="panel">
+            <div class="label">Baseline (SAM2)</div>
+            <img src="images/compare-left.jpg" alt="baseline result">
+          </div>
+          <div class="panel">
+            <div class="label">Sentry (ours)</div>
+            <img src="images/compare-right.jpg" alt="sentry result">
+          </div>
+        </div>
+        <p style="color:var(--muted);margin:14px 8px 0;font-size:15px">Figure: qualitative comparison of baseline and Sentry on a challenging sequence. Replace the images in <code>images/</code> with your results.</p>
+      </section>
 
-      <div style="height:14px"></div>
+      <section style="margin-top:28px">
+        <h2 style="font-size:20px;margin:0 0 10px">Abstract</h2>
+        <p style="color:var(--muted);line-height:1.6">Sentry introduces a neighbor-aware memory module and self-verification mechanism that enforces cycle-consistent masks to improve robustness against distractors and long-term occlusions. Replace this paragraph with your short abstract or summary.</p>
+      </section>
 
-      <div class="card">
-        <h3>Example</h3>
-        <p class="small">Add qualitative examples, figure placeholders, or short demo instructions here.</p>
-        <div style="height:10px"></div>
-        <img class="res" src="assets/sentry-example.jpg" alt="Example frame (replace with your image)" />
-      </div>
+      <section style="margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+          <h3 style="margin-top:0">Features</h3>
+          <ul style="color:var(--muted);line-height:1.6;margin:8px 0 0;padding-left:18px">
+            <li>Neighbor-aware memory that filters distractors</li>
+            <li>Self-verified cycle-consistent mask refinement</li>
+            <li>Plug-and-play with SAM2-based trackers</li>
+            <li>State-of-the-art results on tracking benchmarks</li>
+          </ul>
+        </div>
+        <div style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+          <h3 style="margin-top:0">Get the code</h3>
+          <p style="color:var(--muted);line-height:1.6">Link to the repo, installation notes, or quick-start commands. Example:</p>
+          <pre style="background:#f8fafc;padding:8px;border-radius:6px;color:#111;margin:8px 0">git clone &lt;your-repo-url&gt;
+cd sentry
+pip install -r requirements.txt
+python demo.py --video examples/sequence.mp4</pre>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <div class="small">Created by Your Name — last updated: <!-- insert date --> </div>
+      <div>© 2025 Your Name — <a href="#" style="color:var(--accent);text-decoration:none">Contact</a></div>
     </footer>
   </div>
 </body>
